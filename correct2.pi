@@ -1,0 +1,64 @@
+// File: correct2.pi
+
+func add(x1 int, x2 int) int {
+   var r = 0 int;
+   r = x1 + x2;
+   return r;
+}
+
+func sub(x1 int, x2 int) int {
+   var r = 0 int;
+   r = x1 - x2;
+   return r;
+}
+
+func mul(x1 int, x2 int) int {
+   var r = 0 int;
+   r = x1 * x2;
+   return r;
+}
+
+func divis(x1 int, x2 int) int {
+   var r = 0 int;
+   r = x1 / x2;
+   return r;
+}
+
+func begin() {
+   var x, y, res = 0 int;
+   var op int;
+
+   writeString("#######################\n");
+   writeString("###  iCalculator    ###\n");
+   writeString("#######################\n\n\n");
+
+   writeString("Please enter an integer:\n");
+   x = readInt();
+
+   writeString("..aaand another one please:\n");
+   y = readInt();
+
+   writeString("What operation would you like to do?\n1: Addition\n2: Substraction\n3: Multiplication\n4: Division\n");
+
+   op = readInt();
+
+   
+   if(op == 1){
+      res = add(x, y);
+   } else if(op == 2){
+      res = sub(x, y);
+   } else if(op == 3){
+      res = mul(x, y);
+   } else if(op == 4){
+      res = divis(x, y);
+   } else {
+      writeString("There is no such an operation.\n");   
+      return;
+   }
+
+   writeString("The Result of the Operation is: ");
+   writeInt(res);
+   writeString("\n");
+
+
+}
